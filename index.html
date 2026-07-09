@@ -92,7 +92,6 @@
 .status-nao-realizado { background: #fff3e0; color: #e65100; }
 .status-nao-projetado { background: #e3f2fd; color: #0d47a1; }
 .status-ok { background: #e8f5e9; color: #1b5e20; }
-    #log { background: #263238; color: #aed581; padding: 10px; border-radius: 5px; margin: 10px 0; font-family: monospace; font-size: 12px; max-height: 150px; overflow-y: auto; }
 .tabs { display: flex; gap: 10px; margin-bottom: 15px; }
 .tab-btn { background: #e0e0e0; color: #333; }
 .tab-btn.active { background: #1a237e; color: white; }
@@ -130,7 +129,6 @@
         <span id="status-carregamento">Carregando dados...</span>
     </div>
 
-    <div id="log">Iniciando...</div>
 
     <table id="tabela-lancamentos">
         <thead>
@@ -247,12 +245,6 @@
 
 <script>
     const CSV_URL = './dados.csv';
-
-    function log(msg) {
-        const logDiv = document.getElementById('log');
-        logDiv.innerHTML += msg + '<br>';
-        logDiv.scrollTop = logDiv.scrollHeight;
-    }
 
     function setStatus(msg) {
         document.getElementById('status-carregamento').textContent = msg;
