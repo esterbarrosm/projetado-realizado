@@ -7,51 +7,51 @@
     <style>
         * { box-sizing: border-box; }
         body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f0f2f5; color: #333; }
-       .container { max-width: 1600px; margin: 0 auto; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+      .container { max-width: 1600px; margin: 0 auto; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
         h1 { text-align: center; color: #1a237e; margin-top: 0; }
-       .actions { margin-bottom: 20px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+      .actions { margin-bottom: 20px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
         button { padding: 10px 18px; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; }
-       .btn-add { background: #2e7d32; color: white; }
-       .btn-clear { background: #757575; color: white; }
-       .btn-export { background: #1565c0; color: white; }
-       .btn-reload { background: #f57c00; color: white; }
+      .btn-add { background: #2e7d32; color: white; }
+      .btn-clear { background: #757575; color: white; }
+      .btn-export { background: #1565c0; color: white; }
+      .btn-reload { background: #f57c00; color: white; }
         table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
         th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
         th { background: #1a237e; color: white; }
         td input, td select { width: 100%; border: none; padding: 4px; font-size: 14px; background: transparent; }
         td input[type="number"] { text-align: right; }
         td input:focus, td select:focus { background: #fff9c4; outline: 1px solid #fbc02d; }
-       .tipo-projecao { background: #e3f2fd; }
-       .tipo-realizado { background: #fff3e0; }
-       .resultado { margin-top: 30px; border-top: 3px solid #1a237e; padding-top: 20px; }
-       .resultado h2 { color: #1a237e; text-align: center; margin-bottom: 15px; }
-       .resultado h3 { color: #283593; margin: 25px 0 10px 0; border-bottom: 2px solid #c5cae9; padding-bottom: 5px; }
-       .resumo-geral { background: #e8eaf6; padding: 15px; border-radius: 8px; margin-bottom: 20px; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; }
-       .total-item { text-align: center; }
-       .total-item span { display: block; font-size: 12px; color: #555; }
-       .total-item strong { font-size: 20px; color: #1a237e; }
-       .tabela-resultado td { font-weight: 500; }
-       .tabela-resultado tfoot td { background: #263238; color: white; font-weight: bold; border-top: 3px solid #1a237e; }
-       .diff-positive { background: #ffcdd2; color: #c62828; }
-       .diff-negative { background: #c8e6c9; color: #2e7d32; }
-       .diff-zero { background: #f5f5f5; color: #666; }
-       .status-nao-realizado { background: #fff3e0; color: #e65100; }
-       .status-nao-projetado { background: #e3f2fd; color: #0d47a1; }
-       .status-ok { background: #e8f5e9; color: #1b5e20; }
-       .tabs { display: flex; gap: 10px; margin-bottom: 15px; }
-       .tab-btn { background: #e0e0e0; color: #333; }
-       .tab-btn.active { background: #1a237e; color: white; }
-       .tab-content { display: none; }
-       .tab-content.active { display: block; }
-       .resumo-status { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
-       .card-status { padding: 15px; border-radius: 8px; text-align: center; border-left: 5px solid; }
-       .card-status span { display: block; font-size: 13px; margin-bottom: 5px; }
-       .card-status strong { font-size: 22px; }
-       .card-nao-realizado { background: #fff3e0; border-color: #e65100; color: #e65100; }
-       .card-ok { background: #e8f5e9; border-color: #2e7d32; color: #1b5e20; }
-       .card-nao-projetado { background: #e3f2fd; border-color: #0d47a1; color: #0d47a1; }
+      .tipo-projecao { background: #e3f2fd; }
+      .tipo-realizado { background: #fff3e0; }
+      .resultado { margin-top: 30px; border-top: 3px solid #1a237e; padding-top: 20px; }
+      .resultado h2 { color: #1a237e; text-align: center; margin-bottom: 15px; }
+      .resultado h3 { color: #283593; margin: 25px 0 10px 0; border-bottom: 2px solid #c5cae9; padding-bottom: 5px; }
+      .resumo-geral { background: #e8eaf6; padding: 15px; border-radius: 8px; margin-bottom: 20px; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; }
+      .total-item { text-align: center; }
+      .total-item span { display: block; font-size: 12px; color: #555; }
+      .total-item strong { font-size: 20px; color: #1a237e; }
+      .tabela-resultado td { font-weight: 500; }
+      .tabela-resultado tfoot td { background: #263238; color: white; font-weight: bold; border-top: 3px solid #1a237e; }
+      .diff-positive { background: #ffcdd2; color: #c62828; }
+      .diff-negative { background: #c8e6c9; color: #2e7d32; }
+      .diff-zero { background: #f5f5f5; color: #666; }
+      .status-nao-realizado { background: #fff3e0; color: #e65100; }
+      .status-nao-projetado { background: #e3f2fd; color: #0d47a1; }
+      .status-ok { background: #e8f5e9; color: #1b5e20; }
+      .tabs { display: flex; gap: 10px; margin-bottom: 15px; }
+      .tab-btn { background: #e0e0e0; color: #333; }
+      .tab-btn.active { background: #1a237e; color: white; }
+      .tab-content { display: none; }
+      .tab-content.active { display: block; }
+      .resumo-status { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+      .card-status { padding: 15px; border-radius: 8px; text-align: center; border-left: 5px solid; }
+      .card-status span { display: block; font-size: 13px; margin-bottom: 5px; }
+      .card-status strong { font-size: 22px; }
+      .card-nao-realizado { background: #fff3e0; border-color: #e65100; color: #e65100; }
+      .card-ok { background: #e8f5e9; border-color: #2e7d32; color: #1b5e20; }
+      .card-nao-projetado { background: #e3f2fd; border-color: #0d47a1; color: #0d47a1; }
         #status-carregamento { font-size: 12px; color: #666; margin-left: 10px; }
-       .erro { color: #c62828; font-weight: bold; }
+      .erro { color: #c62828; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -131,7 +131,6 @@
 </div>
 
 <script>
-    // URL completa + timestamp pra evitar cache do GitHub
     const CSV_URL = 'https://esterbarrosm.github.io/projetado-realizado/dados.csv';
 
     function setStatus(msg, isError = false) {
@@ -313,10 +312,10 @@
     }
 
     function exportCSV() {
-        let csv = 'Fornecedor;Natureza;Vencimento;Valor;Tipo;Centro de Resultado\n';
+        let csv = 'Tipo;Fornecedor;Vencimento;Valor;Natureza;Centro de Resultado\n';
         document.querySelectorAll('#corpo-tabela tr').forEach(tr => {
             const inputs = tr.querySelectorAll('input, select');
-            const row = [inputs[0].value, inputs[1].value, inputs[2].value, inputs[3].value || 0, inputs[4].value, inputs[5].value].join(';');
+            const row = [inputs[4].value, inputs[0].value, inputs[2].value, inputs[3].value || 0, inputs[1].value, inputs[5].value].join(';');
             csv += row + '\n';
         });
         const blob = new Blob([csv], {type: 'text/csv;charset=utf-8;'});
@@ -332,14 +331,15 @@
         document.getElementById('corpo-tabela').innerHTML = '';
         let importados = 0;
 
+        // ORDEM NOVA: Tipo; Fornecedor; Vencimento; Valor; Natureza; Centro de Resultado
         linhas.slice(1).forEach((linha) => {
             const cols = linha.split(delimiter).map(v => v.replace(/^"|"$/g, '').trim());
-            const fornecedor = cols[0] || '';
-            const natureza = cols[1] || '';
-            const vencimento = parseDateBR(cols[2] || '');
-            const valor = parseValorBR(cols[3] || '0');
-            const tipo = normalizaTipo(cols[4] || '');
-            const centro = cols[5] || '';
+            const tipo = normalizaTipo(cols[0] || ''); // cols[0] = Tipo
+            const fornecedor = cols[1] || ''; // cols[1] = Fornecedor
+            const vencimento = parseDateBR(cols[2] || ''); // cols[2] = Vencimento
+            const valor = parseValorBR(cols[3] || '0'); // cols[3] = Valor
+            const natureza = cols[4] || ''; // cols[4] = Natureza
+            const centro = cols[5] || ''; // cols[5] = Centro
 
             if (fornecedor || valor > 0 || natureza || centro) {
                 addRow({ fornecedor: fornecedor, natureza: natureza, vencimento: vencimento, valor: valor, tipo: tipo, centro: centro });
@@ -353,7 +353,6 @@
     async function carregarCSVOnline() {
         setStatus('Carregando CSV...');
         try {
-            // Timestamp força o GitHub a não usar cache
             const url = CSV_URL + '?t=' + new Date().getTime();
             const response = await fetch(url, {cache: 'no-store'});
             if (!response.ok) throw new Error(`Erro ${response.status}: CSV não encontrado`);
